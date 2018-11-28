@@ -1,13 +1,12 @@
 package com.company;
 
 public class car {
-
-    engine Engine = new engine();
-    pump Pump = new pump();
     tank Tank = new tank(100.0F);
+    pump Pump = new pump();
+    engine Engine = new engine(Pump);
 
-    Engine.start();
-    Pump.start();
+    //Engine.start();
+    //Pump.start();
     //constructor
     //run();
     //в баке 100 Л

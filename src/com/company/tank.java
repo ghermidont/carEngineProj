@@ -1,26 +1,27 @@
 package com.company;
 
 public class tank {
-    private Float volume;
+    private Float tankFuel; //у бака есть максимальный обьем - 200 литров
 
-    //у бака есть максимальный обьем - 200 литров
 
-    public tank(Float volume) {
-        this.volume = volume;
+    // CONSTRUCTOR
+    public tank(Float tankFuel) {
+        this.tankFuel = tankFuel;
     }
 
+    // GETTER & SETTER + TO STRING
     public Float getVolume() {
-        return volume;
+        return tankFuel;
     }
 
-    public void setVolume(Float volume) {
-        this.volume = volume;
+    public void setVolume(Float tankFuel) {
+        this.tankFuel = tankFuel;
     }
 
     @Override
     public String toString() {
         return "tank{" +
-                "volume=" + volume +
+                "volume=" + tankFuel +
                 '}';
     }
 }

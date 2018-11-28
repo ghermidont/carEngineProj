@@ -1,23 +1,31 @@
 package com.company;
 
 public class engine extends Thread {
-   // у двигателя тоже - 2 (литра)
-    private Float volume;
 
-    //construct, getter, setter, toString.
+    private Float engineFuel = 0.0F; // у двигателя max -> 2 (литра)
 
-    void burn(Float volume) {
-        //метов "burn()" двигателя - сжигает 'volume' литра - каждый раз когда его вызывают
+    public engine( pump p ){
+        this.engineFuel = ???;
+    }
+
+    void burnEngineFuel(){
+        this.engineFuel=0.0F;
     }
 
     public void run(){
-        System.out.println("hi");
-       //    while(){
-            //ДВИГАТЕЛЬ может накопить максимум 50% своего обьема (из 2 литров ) чтобы зажигание имело место
-            //двигатель не может burn() - ить если в нем нету хотяб 0.05 литров топлива ))
-
-            //....
+        while( engineFuel >= 0.05F && engineFuel <= 1.0F ){
+            engineFuel+=0.15F;
+        }
+        burnEngineFuel();
     }
 
+    // GETTERS & SETTERS + TO STRING
+    public Float getEngineFuel() {
+        return engineFuel;
+    }
+
+    public void setEngineFuel(Float engineFuel) {
+        this.engineFuel = engineFuel;
+    }
 
 }

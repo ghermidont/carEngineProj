@@ -3,7 +3,7 @@ package com.company;
 public class pump extends Thread{
     //constructor getter setter to String.
 
-    void take(Float volume){
+    void takeFromPump(Float volume){
         //метод "take()" из класса Pump - забирает 'volume' литра топлива из бака  - каждый раз когда его вызывают
     }
     void put(Float volume){
