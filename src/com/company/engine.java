@@ -2,14 +2,14 @@ package com.company;
 
 public class engine extends Thread {
 
-    private Float engineFuel = 0.0F; // у двигателя max -> 2 (литра)
-
-    public engine( pump p ){
-        this.engineFuel = ???;
-    }
+    private Float engineFuel = 0.0F;
 
     void burnEngineFuel(){
-        this.engineFuel=0.0F;
+        this.engineFuel = 0.0F;
+    }
+
+    public void setEngineFuel(Float fuelToEngineFromPump) {
+        this.engineFuel = fuelToEngineFromPump;
     }
 
     public void run(){
@@ -17,15 +17,6 @@ public class engine extends Thread {
             engineFuel+=0.15F;
         }
         burnEngineFuel();
-    }
-
-    // GETTERS & SETTERS + TO STRING
-    public Float getEngineFuel() {
-        return engineFuel;
-    }
-
-    public void setEngineFuel(Float engineFuel) {
-        this.engineFuel = engineFuel;
     }
 
 }
