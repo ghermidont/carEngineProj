@@ -2,7 +2,7 @@ package com.company;
 
 public class Tank{
 
-    private Float fuelInTheTank;
+    private volatile Float fuelInTheTank;
 
     // CONSTRUCTOR
     public Tank ( Float fuelInTheTank ) {

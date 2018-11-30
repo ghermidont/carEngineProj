@@ -4,15 +4,17 @@ public class Engine extends Thread {
 
     private Float engineFuelVolume = 0.0F;
 
-    void burnEngineFuel(){
+    private void burnEngineFuel(){
         this.engineFuelVolume = 0.0F;
     }
 
-    public void run(){
-        burnEngineFuel();
+    public synchronized void run(Tank tankLink){
+        while ( tankLink.getfuelInTheTank ( ) >= 0.05F){
+            burnEngineFuel ();
+        }
     }
 
-    // GETTER n SETTER + ToString
+      // GETTER n SETTER + ToString
     public Float getEngineFuelvolume ( ) {
         return engineFuelVolume;
     }
