@@ -2,7 +2,7 @@ package com.company;
 
 public class Tank{
 
-    private volatile Float fuelInTheTank;
+    private Float fuelInTheTank;
 
     // CONSTRUCTOR
     public Tank ( Float fuelInTheTank ) {
@@ -20,8 +20,7 @@ public class Tank{
 
     @Override
     public String toString() {
-            return "Fuel in the TANK: " + fuelInTheTank +
-                    " liters";
+            return "Fuel in the TANK: " + fuelInTheTank + " liters";
     }
 
 }
